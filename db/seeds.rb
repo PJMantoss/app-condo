@@ -8,13 +8,13 @@
 
 (1..75).each do |i|
     App.create({
-      name: Faker::Lorem.sentence(1, false, 4).chomp("."),
+      name: Faker::Lorem.sentence(word_count: 1, supplemental: false, random_words_to_add: 4).chomp("."),
       version: Faker::App.version,
       author: Faker::App.author,
-      release_date: Faker::Date.between(5.years.ago, Date.today),
-      description: Faker::Lorem.paragraph(5, false, 20),
-      downloads: Faker::Number.between(1,10000000),
-      rated_times: Faker::Number.between(1,10000),
-      rating: Faker::Number.between(1,5)
+      release_date: Faker::Date.between(from: 5.years.ago, to: Date.today),
+      description: Faker::Lorem.paragraph(sentence_count: 5, supplemental: false, random_sentences_to_add: 20),
+      downloads: Faker::Number.between(from: 1, to: 10000000),
+      rated_times: Faker::Number.between(from: 1, to: 10000),
+      rating: Faker::Number.between(from: 1, to: 5)
     })  
   end

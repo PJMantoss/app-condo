@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 #For seed data
 gem 'faker', '~> 2.7'
 
+gem 'rubocop-faker'
+
 #Semantic UI Library
 gem 'semantic-ui-sass', '~> 2.4', '>= 2.4.2.0'
 
