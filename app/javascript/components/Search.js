@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 
 export class Search extends Component {
     state = { loading: false, results: [] };
-    
+
+    onChange = e => {
+        const { value } = e.target;
+        this.setState({ loading: true });
+        if (value.length > 0){
+            axios.get('/search.json', { params: { query: value } })
+            .then(res => this.setState({ loading: false, results: res.data }))
+            .catch(() => this.setState({ loading: false, results: [] }));
+        } else {
+            this.setState({ loading: false, results: [] })
+        }
+    }
     render() {
         return (
             <div className="ui raised segment no padding">
@@ -11,7 +22,8 @@ export class Search extends Component {
                         <input 
                             name="query" 
                             type="text" 
-                            placeholder="Search apps..." 
+                            placeholder="Search apps..."
+                            onChange={this.onChange} 
                             autoComplete="off" 
                         />
                         <button type="submit">
