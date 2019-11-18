@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 export class Search extends Component {
+    state = { loading: false, results: [] };
+    
     render() {
         return (
             <div className="ui raised segment no padding">
