@@ -2,7 +2,7 @@
     <h1 class="ui header"><%= params[:query] %> (<%= @apps.count %> results)</h1>
     <div class="ui divider"></div>
     <div class="ui divided link items">
-        <% @app.each do |app| %>
+        <% @apps.each do |app| %>
             <a class="item" href="<%= app_path(app) %>">
                 <div class="small image">
                     <img src="<%= app_image(app) %>">
