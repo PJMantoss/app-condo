@@ -1,5 +1,5 @@
-<div>
-    <h1></h1>
+<div class="ui raised segment">
+    <h1 class="ui header"><%= params[:query] %> (<%= @apps.count %> results)</h1>
     <div class="ui divider"></div>
     <div class="ui divided link items">
         <% @app.each do |app| %>
