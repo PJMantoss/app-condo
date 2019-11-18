@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'react_on_rails', '~> 11.3'
+
+gem 'mini_racer', '~> 0.2.8'
 
 #For seed data
 gem 'faker', '~> 2.7'
